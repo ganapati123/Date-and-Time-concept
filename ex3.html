@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var d = new Date()
+        var year,month,day,date,h,m,s,ms,ltime;
+        
+        year  = d.getFullYear()
+        month = d.getMonth()+1
+        date  = d.getDate()
+        day   = d.getDay()+1
+        h     = d.getHours()
+        m     = d.getMinutes()
+        s     = d.getSeconds()
+        ms    = d.getMilliseconds()
+        ltime = d.toLocaleTimeString()
+
+        // document.write(`Today date is:${date}<br/>`)
+        // document.write(`Month:        ${month}<br/>`)
+        // document.write(`Year:         ${year}<br/>`)
+        // document.write(`Day:          ${day}<br/>`)
+        // document.write(`Hours:        ${h}<br/>`)
+        // document.write(`Minutes:      ${m}<br/>`)
+        // document.write(`Seconds:      ${s}<br/>`)
+        // document.write(`MilliSeconds: ${ms}<br/>`)
+        // document.write(`LocalTime:    ${ltime}<br/>`)
+
+        document.write(`${date}-${month}-${year} [${h}:${m}:${s}]`)
+
+    </script>
+</body>
+</html>

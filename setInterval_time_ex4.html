@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.setInterval(()=>
+      {
+          var d = new Date()
+          var year,month,day,date,h,m,s,ms,ltime;
+          var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+      year  = d.getFullYear()
+      month = d.getMonth()
+      date  = d.getDate()
+      day   = d.getDay()
+      h     = d.getHours()
+      m     = d.getMinutes()
+      s     = d.getSeconds()
+      ms    = d.getMilliseconds()
+      ltime = d.toLocaleTimeString()
+
+      dateDetails=`${date}-${months[d.getMonth()].slice(0,3)}-${year} `
+      
+      document.getElementById('dt24').innerText = `${dateDetails} [${h}:${m}:${s}]`
+
+      document.getElementById('dt12').innerText = `${dateDetails}[${ltime}]`
+
+
+      }, 1000)
+      </script>
+</head>
+<body>
+    <h4>24hrs timeZone</h4>
+    <time id="dt24"></time>
+
+    <h4>12hrs timeZone</h4>
+    <time id="dt12"></time>
+   
+</body>
+</html>
